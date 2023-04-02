@@ -66,24 +66,18 @@ div.btn-wrap {
   width: 250px;
 }
 
-div.btn-wrap h6 {
+.play h6 {
   margin: 0;
 }
 
-div.btn-wrap .btn {
+.play {
   display: flex;
   align-items: center;
   gap: 10px;
   font-size: 18px;
 }
 
-/* div.btn-wrap i {
-  width: 5px;
-  border-radius: 5px;
-  background-color: white;
-} */
-
-div.btn-wrap a {
+a.learn-more {
   font-weight: 600;
   font-size: 14px;
   color: dodgerblue;
@@ -190,12 +184,17 @@ div.btn-wrap a {
   margin: auto;
 }
 
+.title-block p {
+  color: grey;
+}
+
 .keycards {
   display: flex;
   max-width: 1300px;
   align-items: center;
   margin: auto;
   gap: 30px;
+  padding: 100px 0;
 }
 
 .keycard {
@@ -203,6 +202,12 @@ div.btn-wrap a {
   border: 1px solid transparent;
   box-shadow: 0 6px 7px lightgrey;
   padding: 18px;
+  transition: ease-in-out .2s;
+  margin: auto;
+}
+
+.keycard:hover {
+  box-shadow: 0 6px 9px grey;
 }
 
 .keycard img {
@@ -222,8 +227,19 @@ div.btn-wrap a {
   line-height: 1.8;
 }
 
-.keycard a {
-  font-weight: 600;
-  font-size: 14px;
-  color: dodgerblue;
+.feature-banner {
+  max-width: 100%;
+  align-items: normal;
+  background-color: rgba(250, 250, 255, 1);
+  padding: 100px 20px 0;
 }
+
+.feature-banner .text {
+  min-width: 450px;
+  max-width: 450px;
+}
+
+.feature-banner img {
+  width: 450px;
+}
+
