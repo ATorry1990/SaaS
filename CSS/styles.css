@@ -1,0 +1,229 @@
+header {
+  position: fixed;
+  width: 100%;
+}
+
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+#header img {
+  width: 200px;
+}
+
+.header-nav {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-nav ul {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.header-nav ul li a {
+  color: grey;
+  font-size: 15px;
+}
+
+.header-nav ul li a:hover {
+  color: dodgerblue;
+}
+
+.banner {
+  background-image: url();
+  background-color: lightgrey;
+  width: 100%;
+  height: 700px;
+  padding: 150px 0;
+}
+
+div.text-wrap {
+  flex-direction: column;
+  align-items: normal;
+  width: 450px;
+}
+
+.text-wrap .text h1 {
+  font-size: 50px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.text-wrap .text p {
+  color: grey;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 50px;
+}
+
+div.btn-wrap {
+  width: 250px;
+}
+
+div.btn-wrap h6 {
+  margin: 0;
+}
+
+div.btn-wrap .btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+/* div.btn-wrap i {
+  width: 5px;
+  border-radius: 5px;
+  background-color: white;
+} */
+
+div.btn-wrap a {
+  font-weight: 600;
+  font-size: 14px;
+  color: dodgerblue;
+}
+
+.logo-grid {
+  max-width: 500px;
+  max-height: 500px;
+  display: grid;
+  grid-template-columns: repeat(16, 1fr);
+  grid-template-rows: repeat(15, 1fr);
+}
+
+.logo-grid div {
+  text-align: center;
+  margin: auto;
+}
+
+.icon {
+  width: 75px;
+  margin: 4px 0;
+  padding: 11px;
+}
+
+#google .icon,
+#google-A .icon {
+  width: 50px;
+  margin: 4px 0;
+  padding: 5px;
+}
+
+#google {
+  width: 60px;
+  height: 60px;
+  grid-area: 1 / 2 / 3 / 4;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 1px 7px grey;
+}
+
+#atlassian {
+  width: 85px;
+  height: 85px;
+  grid-area: 1 / 6 / 4 / 9;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 1px 7px grey;
+}
+
+#asana {
+  width: 85px;
+  height: 85px;
+  grid-area: 1 / 14 / 4 / 17;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 1px 7px grey;
+}
+
+#paypal {
+  width: 85px;
+  height: 85px;
+  grid-area: 7 / 1 / 10 / 4;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 1px 7px grey;
+}
+
+#weave {
+  width: 85px;
+  height: 85px;
+  grid-area: 7 / 9 / 10 / 12;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 1px 7px grey;
+}
+
+#google-A {
+  width: 60px;
+  height: 60px;
+  grid-area: 11 / 5 / 13 / 7;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 1px 7px grey;
+}
+
+#calendar {
+  width: 85px;
+  height: 85px;
+  grid-area: 12 / 13 / 15 / 16;
+  border: 1px solid transparent;
+  border-radius: 50px;
+  background-color: white;
+  box-shadow: 0 1px 7px grey;
+}
+
+.title-block {
+  text-align: center;
+  margin: auto;
+}
+
+.keycards {
+  display: flex;
+  max-width: 1300px;
+  align-items: center;
+  margin: auto;
+  gap: 30px;
+}
+
+.keycard {
+  width: 250px;
+  border: 1px solid transparent;
+  box-shadow: 0 6px 7px lightgrey;
+  padding: 18px;
+}
+
+.keycard img {
+  width: 50px;
+}
+
+.keycard h3 {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.keycard p {
+  color: grey;
+  font-size: 14px;
+  font-weight: 500;
+  margin: 20px 0;
+  line-height: 1.8;
+}
+
+.keycard a {
+  font-weight: 600;
+  font-size: 14px;
+  color: dodgerblue;
+}
