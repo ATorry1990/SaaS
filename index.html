@@ -232,65 +232,70 @@
       <div class="container hire">
         <div class="flex">
           <div class="text">
-            <h2>Hire Us</h2>
-            <p>Whatever your goal - we will get you there</p>
-            <hr>
+            <div>
+              <h2>Hire Us</h2>
+              <p>Whatever your goal - we will get you there</p>
+            </div>
             <p class="emph">"I love Front! I love the ease of use, I love the fact that 
               I have total creative freedom..."</p>
-              <h3>Charlotte Moore</h3>
-              <h4>Head of Commercials, Slack</h4>
-              <div class="flex">
-                <img src="./Assets/people/woman_two.jpg" alt="">
-                <img src="./Assets/people/woman_one.jpg" alt="">
-                <img src="./Assets/people/man_one.jpg" alt="">
-              </div>
+            <h3>Charlotte Moore</h3>
+            <h4>Head of Commercials, Slack</h4>
+            <div class="flex">
+              <img src="./Assets/people/woman_two.jpg" alt="">
+              <img src="./Assets/people/woman_one.jpg" alt="">
+              <img src="./Assets/people/man_one.jpg" alt="">
+            </div>
           </div>
           <form action="" method="post">
             <h3>Fill out the form and we'll be in touch as soon as possible</h3>
             <input 
+              class="form-item"
               type="text"
-              value="first_name"
+              value=""
               id="first_name-one"
               placeholder="First name"
             >
             <input 
+              class="form-item"
               type="text"
-              value="last_name"
+              value=""
               id="last_name-one"
               placeholder="Last name"
             >
             <input 
+              class="form-item"
               type="text"
-              value="first_name"
+              value=""
               id="first_name-two"
               placeholder="First name"
             >
             <input 
+              class="form-item"
               type="text"
-              value="last_name"
+              value=""
               id="last_name-two"
               placeholder="Last name"
             >
-            <select name="budget" id="budget">
-              <option value="" selected>Budget</option>
+            <select name="budget" id="budget" class="form-item">
+              <option value="" selected disabled>Budget</option>
               <option value="low">0-10k</option>
               <option value="mid">10k-50k</option>
               <option value="high">50k-500k</option>
               <option value="elite">+500k</option>
             </select>
-            <select name="country" id="country">
-              <option value="" selected>Country</option>
+            <select name="country" id="country" class="form-item">
+              <option value="" selected disabled>Country</option>
               <option value="USA">United States</option>
               <option value="CAN">Canada</option>
               <option value="MEX">Mexico</option>
             </select>
             <textarea 
+              class="form-item"
               name="comment" 
               id="comment" 
               cols="30" 
-              rows="10">
-              Tell us more about your project, needs, and timeline please...
-            </textarea>
+              rows="7"
+              placeholder="Tell us more about your project, needs, and timeline please..."></textarea>
             <input type="checkbox" name="marketing" id="marketing">
             <label for="marketing">Yes, I'd like to receive occasional marketing emails 
               from Front. I have the right to opt out at any time.</label>

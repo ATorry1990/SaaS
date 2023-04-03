@@ -458,3 +458,133 @@ a.learn-more {
   font-size: 14px;
   color: slategray;
 }
+
+.hire-us {
+  background-color: rgb(30, 50, 90);
+}
+
+.hire .text {
+  width: 450px;
+  color: white;
+  padding: 150px 0 0 50px;
+  line-height: 1.5;
+}
+
+.hire .text > div:first-of-type {
+  width: 200px;
+  border-bottom: 1px solid white;
+  margin-bottom: 30px;
+}
+
+.hire .text > div h2 {
+  font-size: 26px;
+}
+
+.hire .text > div p {
+  color: slategray;
+  margin-bottom: 30px;
+  width: 180px;
+}
+
+.hire .text .emph {
+  margin-bottom: 60px;
+}
+
+.hire .text h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.hire .text h4 {
+  color: slategray;
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.hire .text .flex {
+  width: 200px;
+  margin: 50px 0;
+}
+
+.hire .text .flex img {
+  width: 40px;
+  border-radius: 50px;
+}
+
+.hire .text .flex img:last-child {
+  width: 60px;
+}
+
+.hire form {
+  width: 450px;
+  height: 650px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  margin: 30px;
+  box-shadow: 0 0 6px black;
+  transition: ease-in-out .2s;
+}
+
+.hire form:hover {
+  box-shadow: 0 0 8px lightgray;
+}
+
+.hire form h3 {
+  font-size: 14px;
+}
+
+.hire form .form-item {
+  width: 182px;
+  font-size: 14px;
+  border-radius: 5px;
+  border: 1px solid lightgray;
+  padding: 15px 5px;
+  margin: 10px 0;
+}
+
+.hire form input[type="text"]:nth-of-type(odd) {
+  margin-right: 20px;
+}
+
+.hire form select:nth-of-type(odd) {
+  margin-right: 20px;
+}
+
+.hire form textarea.form-item {
+  width: 390px;
+  color: slategray;  
+}
+
+.hire form input[type="checkbox"] {
+  width: 25px;
+  height: 25px;
+  border-radius: 5px;
+  outline: 1px solid lightgray;
+  appearance: none;
+  float: left;
+  margin: 10px;
+}
+
+.hire form input[type="checkbox"]:checked {
+  background: url(../Assets/icons/square-check-solid.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.hire form label {
+  font-size: 13px;
+  color: slategray;
+}
+
+.hire form a {
+  display: block;
+  width: 155px;
+  border-bottom: 1px dotted;
+  margin: 10px 50px;
+}
+
+.hire form button {
+  margin: 20px 130px;
+}
