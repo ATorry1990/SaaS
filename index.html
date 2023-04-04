@@ -11,19 +11,24 @@
     <link rel="stylesheet" href="./CSS/responsive.css">
   </head>
   <body>
-    <header>
+    <header id="header">
       <div class="container">
-        <div id="header">
+        <div id="header-logo">
           <img src="./Assets/project_logo/logo.svg" alt="" class="logo">
           <div class="header-nav">
-            <ul>
-              <li><a href="#home">Home</a></li>
-              <li><a href="#features">Features</a></li>
-              <li><a href="#learn">Learn</a></li>
-              <li><a href="#pricing">Pricing</a></li>
-              <li><a href="#hire-us">Hire us</a></li>
-            </ul>
-            <button class="btn">Buy Now</button>
+            <button class="navbar-toggler" aria-expanded="false" aria-controls="navbarDropdown">
+              <span>&#9776;</span>
+            </button>
+            <div>
+              <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#learn">Learn</a></li>
+                <li><a href="#pricing">Pricing</a></li>
+                <li><a href="#hire-us">Hire us</a></li>
+              </ul>
+              <button class="btn">Buy Now</button>
+            </div>
           </div>
         </div>
       </div>
@@ -310,8 +315,12 @@
         <div class="flex">
           <div class="contact">
             <img src="./Assets/project_logo/logo.svg" alt="logo">
-            <i class="fa fa-location-arrow" aria-hidden="true"></i><h4>153 Williamson Plaza, Maggieberg</h4>
-            <i class="fa fa-phone" aria-hidden="true"></i>+1 (062) 109-9222
+            <br>
+            <i class="fa fa-location-arrow"></i>
+            <p>153 Williamson Plaza, Maggieberg</p>
+            <br>
+            <i class="fa fa-phone"></i>
+            <p>+1 (062) 109-9222</p>
           </div>
           <div class="nav-grid">
             <div class="nav-list">
@@ -346,8 +355,8 @@
             <div class="nav-list">
               <h3>Resources</h3>
               <ul>
-                <li><i></i><a href="#">Help</a></li>
-                <li><i></i><a href="#">Your Account</a></li>
+                <li><i class="fa fa-info-circle"></i><a href="#">Help</a></li>
+                <li><i class="fa fa-user-circle"></i><a href="#">Your Account</a></li>
               </ul>
             </div>
           </div>
@@ -355,27 +364,53 @@
         <hr>
         <div class="flex">
           <p><a href="#">Privacy & Policy</a> > <a href="#">Terms</a> > <a href="#">Site Map</a></p>
-          <div class="flex">
-            <div class="social">
-              <i>facebook</i>
-              <i>google</i>
-              <i>twitter</i>
-              <i>github</i>
+          <div class="flex social-wrap">
+            <div class="social flex">
+              <div>                
+                <i class="fa-brands fa-square-facebook"></i>
+              </div>
+              <div>
+                <i class="fa-brands fa-square-google-plus"></i>
+              </div>
+              <div>
+                <i class="fa-brands fa-square-twitter"></i>
+              </div>
+              <div>
+                <i class="fa-brands fa-square-github"></i>
+              </div>
             </div>
             <select name="country" id="lang">
-              <option value=""><i></i>United States</option>
-              <option value=""><i></i>Canada</option>
-              <option value=""><i></i>Mexico</option>
+              <option value=""> United States</option>
+              <option value=""><img src="./Assets/icons/Flag_of_Canada.svg">Canada</option>
+              <option value=""><img src="./Assets/icons/Flag_of_Mexico_(1916–1934).svg">Mexico</option>
             </select>
           </div>
         </div>
-        <p class="copyright">Front. 2022 Responsive Designs. All rights reserved</p>
+        <p class="copyright">&#169;Front. 2022 Responsive Designs. All rights reserved</p>
         <p>When you visit or interact with out site, services or tools, we or our authorized service 
           providers may use cookies for storing information to help provide you with a better, 
           faster and safer experience and for marketing purposes.</p>
       </div>
     </footer>
-    <script src="" async defer></script>
+    <script>
+      const header = document.getElementById("header");
+      window.onscroll = function () {
+        if (window.pageYOffset > 500) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+
+      const navButton = document.querySelector('button[aria-expanded]');
+
+      function toggleNav({ target }) {
+      const expanded = target.getAttribute('aria-expanded') === 'true' || false;
+      navButton.setAttribute('aria-expanded', !expanded);
+      }
+
+      navButton.addEventListener('click', toggleNav);
+    </script>
     <script src="https://kit.fontawesome.com/952ee177d9.js" crossorigin="anonymous"></script>
   </body>
 </html>

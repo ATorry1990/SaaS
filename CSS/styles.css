@@ -1,16 +1,49 @@
 header {
   position: fixed;
   width: 100%;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 500;
+  transition: ease-in-out .3s;
 }
 
-#header {
+header.sticky {
+  background-color: white;
+  box-shadow: 0 0 20px rgba(42, 63, 100, .2);
+}
+
+.navbar-toggler {
+  position: absolute;
+  right: 50px;
+  top: 25px;
+  outline: none;
+  background-color: transparent;
+  border: 1px solid transparent;
+}
+
+.navbar-toggler span {
+  color: slategray;
+  font-size: 30px;
+  cursor: pointer;
+  pointer-events: none;
+  z-index: 10;
+}
+
+
+[aria-controls="navbarDropdown"] {
+  display: none;
+}
+
+#header-logo {
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 20px 0;
+  z-index: 100;
 }
 
-#header img {
+#header-logo img {
   width: 200px;
 }
 
@@ -18,20 +51,27 @@ header {
   display: flex;
   align-items: center;
   gap: 40px;
+  transition: ease-in-out .2s;
 }
 
-.header-nav ul {
+.header-nav div {
+  display: flex;
+  gap: 40px;
+  transition: ease-in-out .2s;
+}
+
+.header-nav div ul {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-.header-nav ul li a {
+.header-nav div ul li a {
   color: grey;
   font-size: 15px;
 }
 
-.header-nav ul li a:hover {
+.header-nav div ul li a:hover {
   color: dodgerblue;
 }
 
@@ -587,4 +627,149 @@ a.learn-more {
 
 .hire form button {
   margin: 20px 130px;
+}
+
+footer div.container > div.flex:first-of-type {
+  justify-content: initial;
+  align-items: flex-start;
+  gap: 50px;
+  margin: 100px 0;
+}
+
+.contact {
+  width: 320px;
+  color: slategray;
+  margin-top: 15px;
+}
+
+.contact img {
+  width: 50%;
+  display: block;
+}
+
+.contact i {
+  margin: 0;
+  float: left;
+  padding: 3px 10px;
+}
+
+.contact p {
+  margin: 0;
+}
+
+.contact p:nth-of-type(2) {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.nav-grid {
+  max-width: 750px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 50px;
+}
+
+.nav-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.nav-list ul li {
+  margin: 10px 0;
+  color: slategray;
+}
+
+.nav-list ul li a {
+  color: slategray;
+  font-size: 14px;
+}
+
+.nav-list ul li:hover {
+  color: dodgerblue;
+  cursor: pointer;
+}
+
+.nav-list ul li a:hover {
+  color: dodgerblue;
+}
+
+.nav-list ul li i {
+  padding: 3px 10px;
+  font-size: 14px;
+}
+
+footer .container .flex p {
+  color: slategray;
+}
+
+footer .container .flex p a {
+  color: slategray;
+}
+
+footer .container .flex p a:hover {
+  color: dodgerblue;;
+}
+
+footer hr {
+  border-top: 1px solid rgba(200, 200, 200, .3);
+  border-left: none;
+  border-right: none;
+  border-bottom: none;
+}
+
+footer .social-wrap {
+  gap: 20px;
+  padding: 25px 0;
+}
+
+footer .social {
+  gap: 20px;
+}
+
+footer .flex .social div {  
+  height: 30px;
+  width: 30px;
+  background-color: dimgray;
+  border-radius: 5px;
+  border: 1px solid transparent;
+}
+
+footer .flex .social div:hover {
+  background-color: rgb(225, 235, 255);
+}
+
+
+footer .flex .social i {
+  font-size: 40px;
+  color: rgb(225, 235, 255);
+  line-height: .7;
+  margin: 0 10px;
+  cursor: pointer;  
+  position: relative;
+  top: -2px;
+  left: -12px;
+}
+
+footer .flex .social i:hover {
+  color: grey;
+  background-color: rgb(225, 235, 255);
+}
+
+footer .flex select {
+  padding: 5px 20px;
+  font-size: 20px;
+  background-color: rgb(225, 235, 255);
+  border: 1px solid rgb(225, 235, 255);
+  border-radius: 5px;
+  outline: none;
+  position: relative;
+  top: -2px;
+}
+
+footer .container > p {
+  max-width: 800px;
+  text-align: center;
+  color: slategray;
+  margin: auto;
+  padding: 30px 0;
 }
