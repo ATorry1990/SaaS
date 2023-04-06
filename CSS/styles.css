@@ -104,6 +104,7 @@ div.text-wrap {
 
 div.btn-wrap {
   width: 250px;
+  gap: 10px;
 }
 
 .play h6 {
@@ -231,15 +232,16 @@ a.learn-more {
 
 .keycards {
   display: flex;
+  flex-wrap: wrap;
   max-width: 1300px;
   align-items: center;
   margin: auto;
-  gap: 30px;
+  gap: 20px;
   padding: 100px 0;
 }
 
 .keycard {
-  width: 250px;
+  width: 225px;
   border: 1px solid transparent;
   box-shadow: 0 6px 7px lightgrey;
   padding: 18px;
@@ -288,8 +290,9 @@ a.learn-more {
   display: flex;
   justify-content: center;
   gap: 0px;
-  width: 800px;
-  margin: 75px auto;
+  width: 100%;
+  max-width: 700px;
+  margin: 75px auto 0;
 }
 
 .bullet {
@@ -363,13 +366,15 @@ a.learn-more {
 }
 
 .review {
-  height: 500px;
   display: flex;
   gap: 10px;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .profile {
   width: 450px;
+  height: 500px;
 }
 
 .accent {
@@ -436,9 +441,10 @@ a.learn-more {
 
 .price-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   margin: 75px 0;
   gap: 50px;
+  justify-items: center;
 }
 
 .price-card {
@@ -483,6 +489,7 @@ a.learn-more {
 .service {
   width: 240px;
   height: 150px;
+  text-align: left;
 }
 
 .service img {
@@ -503,31 +510,40 @@ a.learn-more {
   background-color: rgb(30, 50, 90);
 }
 
+.hire {
+  text-align: left;
+}
+
 .hire .text {
-  width: 450px;
+  width: 300px;
   color: white;
   padding: 150px 0 0 50px;
   line-height: 1.5;
+  flex-direction: column;
 }
 
 .hire .text > div:first-of-type {
   width: 200px;
-  border-bottom: 1px solid white;
   margin-bottom: 30px;
 }
 
-.hire .text > div h2 {
+.hire-wrap {
+  width: 180px;
+}
+
+.hire .text .hire-wrap h2 {
   font-size: 26px;
 }
 
-.hire .text > div p {
+.hire .text .hire-wrap p {
   color: slategray;
   margin-bottom: 30px;
-  width: 180px;
 }
 
 .hire .text .emph {
   margin-bottom: 60px;
+  color: white;
+  width: 400px;
 }
 
 .hire .text h3 {
@@ -632,12 +648,13 @@ a.learn-more {
 footer div.container > div.flex:first-of-type {
   justify-content: initial;
   align-items: flex-start;
-  gap: 50px;
+  gap: 10px;
   margin: 100px 0;
+  flex-wrap: nowrap;
 }
 
 .contact {
-  width: 320px;
+  width: 300px;
   color: slategray;
   margin-top: 15px;
 }
@@ -654,7 +671,10 @@ footer div.container > div.flex:first-of-type {
 }
 
 .contact p {
+  text-align: left;
   margin: 0;
+  font-size: 14px;
+  width: 280px;
 }
 
 .contact p:nth-of-type(2) {
@@ -663,10 +683,10 @@ footer div.container > div.flex:first-of-type {
 }
 
 .nav-grid {
-  max-width: 750px;
+  max-width: 700px;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 50px;
+  gap: 20px;
 }
 
 .nav-list {
