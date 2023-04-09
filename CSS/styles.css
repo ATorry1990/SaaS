@@ -76,8 +76,11 @@ header.sticky {
 }
 
 .banner {
-  background-image: url();
-  background-color: lightgrey;
+  background-image: url(../Assets/banners/header.svg);
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   width: 100%;
   height: 700px;
   padding: 150px 0;
@@ -87,6 +90,7 @@ div.text-wrap {
   flex-direction: column;
   align-items: normal;
   width: 450px;
+  margin-bottom: 20px;
 }
 
 .text-wrap .text h1 {
@@ -124,12 +128,66 @@ a.learn-more {
   color: dodgerblue;
 }
 
+@keyframes animate-items {
+  0% {
+    position: relative;
+    top: 50px;
+    opacity: 0;
+  }
+  10% {
+    position: relative;
+    top: 45px;
+    opacity: .2;
+  }
+  20% {
+    position: relative;
+    top: 40px;
+    opacity: .4;
+  }
+  30% {
+    position: relative;
+    top: 35px;
+    opacity: 0.6;
+  }
+  40% {
+    position: relative;
+    top: 30px;
+    opacity: 0.8;
+  }
+  50% {
+    position: relative;
+    top: 25px;
+    opacity: 1;
+  }
+  60% {
+    position: relative;
+    top: 20px;
+  }
+  70% {
+    position: relative;
+    top: 15px;
+  }
+  80% {
+    position: relative;
+    top: 10px;
+  }
+  90% {
+    position: relative;
+    top: 5px;
+  }
+  100% {
+    position: relative;
+    top: 0px;
+  }
+}
+
 .logo-grid {
   max-width: 500px;
   max-height: 500px;
   display: grid;
   grid-template-columns: repeat(16, 1fr);
   grid-template-rows: repeat(15, 1fr);
+  transition: ease-in-out .1s;
 }
 
 .logo-grid div {
@@ -158,6 +216,7 @@ a.learn-more {
   border-radius: 50px;
   background-color: white;
   box-shadow: 0 1px 7px grey;
+  animation: animate-items 1s ease-in-out;
 }
 
 #atlassian {
@@ -168,6 +227,7 @@ a.learn-more {
   border-radius: 50px;
   background-color: white;
   box-shadow: 0 1px 7px grey;
+  animation: animate-items .5s ease-in-out;
 }
 
 #asana {
@@ -178,6 +238,7 @@ a.learn-more {
   border-radius: 50px;
   background-color: white;
   box-shadow: 0 1px 7px grey;
+  animation: animate-items .4s ease-in-out;
 }
 
 #paypal {
@@ -188,6 +249,7 @@ a.learn-more {
   border-radius: 50px;
   background-color: white;
   box-shadow: 0 1px 7px grey;
+  animation: animate-items .6s ease-in-out;
 }
 
 #weave {
@@ -198,6 +260,7 @@ a.learn-more {
   border-radius: 50px;
   background-color: white;
   box-shadow: 0 1px 7px grey;
+  animation: animate-items .8s ease-in-out;
 }
 
 #google-A {
@@ -208,6 +271,7 @@ a.learn-more {
   border-radius: 50px;
   background-color: white;
   box-shadow: 0 1px 7px grey;
+  animation: animate-items 1.2s ease-in-out;
 }
 
 #calendar {
@@ -218,6 +282,7 @@ a.learn-more {
   border-radius: 50px;
   background-color: white;
   box-shadow: 0 1px 7px grey;
+  animation: animate-items .5s ease-in-out;
 }
 
 .title-block {
@@ -260,6 +325,18 @@ a.learn-more {
 .keycard h3 {
   font-size: 18px;
   margin: 20px 0;
+}
+
+span.sketch {
+  background-color: rgb(130, 200, 180);
+  color: white;
+  padding: 4px 8px;
+  margin-left: 5px;
+  font-size: 10px;
+  border-radius: 20px;
+  position: relative;
+  top: -2px;
+  letter-spacing: .5px;
 }
 
 .keycard p {
@@ -320,7 +397,7 @@ a.learn-more {
 
 .bullet h3 {
   font-size: 14px;
-  width: 200px;
+  width: 180px;
   margin: 30px 0 30px -70px;
 }
 
@@ -419,7 +496,7 @@ a.learn-more {
 
 .brand-flex {
   height: 225px;
-  margin: auto;
+  margin: 30px auto;
 }
 
 .brand-flex p {
@@ -441,7 +518,7 @@ a.learn-more {
 
 .price-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   margin: 75px 0;
   gap: 50px;
   justify-items: center;
@@ -636,9 +713,10 @@ a.learn-more {
 
 .hire form a {
   display: block;
-  width: 155px;
+  width: 135px;
   border-bottom: 1px dotted;
   margin: 10px 50px;
+  font-size: 14px;
 }
 
 .hire form button {
@@ -646,9 +724,9 @@ a.learn-more {
 }
 
 footer div.container > div.flex:first-of-type {
-  justify-content: initial;
+  justify-content: space-evenly;
   align-items: flex-start;
-  gap: 10px;
+  gap: 50px;
   margin: 100px 0;
   flex-wrap: nowrap;
 }
@@ -702,6 +780,17 @@ footer div.container > div.flex:first-of-type {
 .nav-list ul li a {
   color: slategray;
   font-size: 14px;
+}
+
+.nav-list ul li span {
+  background-color: dodgerblue;
+  color: white;
+  padding: 4px;
+  border-radius: 5px;
+  font-size: 9px;
+  margin-left: 5px;
+  position: relative;
+  top: -2px;
 }
 
 .nav-list ul li:hover {

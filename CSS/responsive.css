@@ -33,7 +33,7 @@
     right: 0;
     left: 0;
     text-align: center;
-    padding: 50px 200px 100px;
+    padding: 50px 0 100px;
     background-color: white;
     z-index: 1;
     flex-direction: column;
@@ -44,6 +44,10 @@
   [aria-expanded="true"] ~ div ul {
     display: flex;
     background-color: white;
+  }
+
+  [aria-expanded="true"] ~ div ul li a {
+    font-size: 18px;
   }
 
   [aria-expanded="true"] ~ div .btn {
@@ -76,6 +80,10 @@
     width: 100%;
   }
 
+  .bullets {
+    max-width: 600px;
+  }
+
   .video {
     left: 0;
   }
@@ -102,7 +110,7 @@
   }
 
   .hire .text {
-    padding: 30px;
+    padding: 30px 30px 0;
     flex-direction: row;
     justify-content: space-between;
     width: 100%;
@@ -110,10 +118,15 @@
 
   .hire .text > div:first-of-type {
     width: 400px;
+    margin-bottom: 0;
   }
 
   .hire-wrap {
     width: 400px;
+  }
+
+  .hire .text .flex {
+    margin-bottom: 0;
   }
 
   .hire form {
@@ -125,14 +138,263 @@
   }
 
   .hire form textarea.form-item {
-  width: 592px;
+    width: 592px;
   }
 
   .hire form button {
-    margin: 20px 240px;
+    margin: 20px 39%;
   }
 
   .nav-grid {
     max-width: 450px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  header {
+    max-width: 450px;
+  }
+
+  [aria-expanded="true"] ~ div ul {
+    flex-direction: column;
+  }
+
+  .logo-grid {
+    max-width: 450px;
+  }
+
+  .icon {
+    width: 75px;
+    margin: 4px 0;
+    padding: 11px;
+  }
+  
+  #google .icon,
+  #google-A .icon {
+    width: 35px;
+    margin: 2px 2px;
+    padding: 2px;
+  }
+  
+  #google,
+  #google-A {
+    width: 40px;
+    height: 40px;
+  }
+  
+  #atlassian .icon,
+  #asana .icon,
+  #paypal .icon,
+  #weave .icon,
+  #calendar .icon {
+    width: 50px;
+    margin: 6px 4px;
+    padding: 5px;
+  }
+  
+  #atlassian,
+  #asana,
+  #paypal,
+  #weave,
+  #calendar {
+    width: 65px;
+    height: 65px;
+  }
+
+  .title-block p {
+    width: 100%;
+    max-width: 335px;
+    margin: auto;
+  }
+
+  .keycards {
+    padding: 30px 0;
+  }
+
+  .feature-banner .text {
+    min-width: 0;
+  }
+
+  .feature-banner .text h2 {
+    max-width: 275px;
+    margin: 25px auto;
+}
+
+  .bullets {
+    flex-direction: column;
+  }
+
+  .bullet {
+    float: left;
+    margin-left: 20px;
+  }
+
+  .bullet h3 {
+    margin: 0;
+    position: relative;
+    top: -35px;
+    left: 80px;
+    text-align: left;
+  }
+
+  .spacer {
+    background-color: transparent;
+  }
+
+  .learn-banner {
+    height: 270px;
+  }
+
+  .learn-banner .video {
+    top: 100px;
+  }
+
+  .profile {
+    width: 100%;
+    max-width: 300px;
+    height: 325px;
+  }
+
+  .accent {
+    top: 60px;
+    width: 125px;
+  }
+
+  .pro {
+    top: -255px;
+    left: 20px;
+    max-width: 250px;
+    width: 100%;
+  }
+
+  .brand-flex {
+    height: auto;
+    margin: 50px auto;
+  }
+
+  .brand-flex .clogo {
+    width: 200px;
+    padding: 20px;
+  }
+
+  .price-grid {
+    margin: 25px 0;
+    gap: 30px;
+  }
+
+  .price-card {
+    grid-column: 1 / 2;
+  }
+
+  .service {
+    height: 175px;
+    justify-self: flex-start;
+    max-width: 375px;
+    width: 100%;
+  }
+
+  .hire .text {
+    padding: 30px 17px;
+  }
+
+  .hire .text > div:first-of-type {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .hire-wrap {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+  }
+
+  .hire .text .emph {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+    margin-bottom: 0px;
+  }
+
+  .hired {
+    width: 100%;
+    max-width: 350px;
+    text-align: center;
+  }
+
+  .flex .hired .flex {
+    margin: 30px auto;
+  }
+
+  .hire form {
+    height: 920px;
+    margin: 30px 0;
+  }
+
+  .hire form .form-item {
+    max-width: 325px;
+    width: 100%;
+  }
+
+  .hire form textarea.form-item {
+    max-width: 325px;
+    width: 100%;
+  }
+
+  .hire form label {
+    font-size: 10px;
+    letter-spacing: -.5px;
+  }
+
+  .hire form .btn {
+    margin: 20px 30%;
+  }
+
+  footer {
+    padding-bottom: 30px;
+  }
+
+  footer div.container > div.flex:first-of-type {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  footer .contact {
+    text-align: center;
+  }
+
+  footer .contact img {
+    margin: auto;
+  }
+
+  footer .contact p {
+    text-align: center;
+  }
+
+  footer .contact p:last-of-type {
+    margin: auto;
+    width: 150px;
+  }
+
+  footer .contact i:last-of-type {
+    margin-left: 40px;
+  }
+
+  footer .nav-grid {
+    max-width: 300px;
+  }
+
+  footer .container .flex p {
+    font-size: 14px;
+  }
+
+  footer .social-wrap {
+    gap: 40px;
+    padding: 10px 0;
+  }
+
+  footer .container p {
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 10px 0;
   }
 }
