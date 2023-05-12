@@ -755,7 +755,7 @@ footer div.container > div.flex:first-of-type {
   width: 280px;
 }
 
-.contact p:nth-of-type(2) {
+.container .contact p:last-of-type:hover {
   color: dodgerblue;
   cursor: pointer;
 }
